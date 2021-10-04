@@ -17,6 +17,7 @@ tedious        #SQL Server
 
 ## Instalação
 
+- Instalar o GIT SCM na máquina;
 - Instalar na máquina o Node.js e NPM (Node Package Manager),
 - Clonar o Repostório em uma pasta,
 - Acessar a pasta raíz e rodar o comando, para instalação:
