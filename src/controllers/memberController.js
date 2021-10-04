@@ -18,21 +18,21 @@ module.exports = {
         }
     },
     async criar(req, res){
-        const {title, poster, overview} = req.body;
+        const { id, nome, email, ddd, celular } = req.body;
         try {
-            const member = await Member.create({title, poster, overview});
+            const member = await Member.create({ id, nome, email, ddd, celular });
             return res.json(member);
-        } catch (error) {
+        } catch (err) {
             return console.error('Erro na criação', err);
         }
     },
-    async atualizar(req, res){
+    async atualizar(req, res) {
         const Sequelize = require('sequelize');
         const Op = Sequelize.Op
-        const { title, poster, overview } = req.body;
+        const { nome, email, ddd, celular } = req.body;
         const id = req.params.id;
         try {
-            await Member.update({title, poster, overview}, {where: {id: {[Op.eq]: id }}});
+            await Member.update({ nome, email, ddd, celular }, {where: {id: {[Op.eq]: id }}});
             return res.json({msg: `Filme ${title} atualizado com sucesso!`});
         } catch (error) {
             return res.json({msg: `Filme ${title} não foi atualizado`}, err);            
