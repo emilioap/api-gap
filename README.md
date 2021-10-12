@@ -7,13 +7,6 @@ WebAPI utilizando Node.js para criação do Projeto Integrador I - GAP.
 - Express.js: framework para Node.js que permite configurar middlewares para responder a solicitações HTTP.
 - Nodemon: biblioteca que ajuda no desenvolvimento com Node.js reiniciando automaticamente o servidor.
 - Sequelize: ORM (Object-Relational Mapper) para facilitar a comunicação com banco SQL, Postgres no caso.
- ```bash
-pg pg-hstore   #Postgres
-mysql2         #Mysql
-mariadb        #MariaDB
-sqlite3        #SQLite
-tedious        #SQL Server
-```
 
 ## Instalação
 
