@@ -28,4 +28,4 @@ $ npm start
 
 ## Testes
 
-- Para testar os endpoints, basta importar o arquivo **GAP-API.postman_collection.json**, localizado na pasta /postman em seu Postman.
+- Para testar os endpoints, basta importar em seu Postman o arquivo **GAP-API.postman_collection.json**, localizado na pasta /postman.
