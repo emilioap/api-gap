@@ -1,11 +1,11 @@
-const AnimalModel = require('../models/animalModel');
+const PadrinhoModel = require('../models/padrinhoModel');
 
 module.exports = {
-
+    
     async listarTodos(req, res){
         try {
-            const animais = await AnimalModel.findAll()
-            return res.json(animais);
+            const padrinhos = await PadrinhoModel.findAll()
+            return res.json(padrinhos);
         } catch (err) {
             return console.error("Erro na listagem: ", err);
         }
@@ -13,8 +13,8 @@ module.exports = {
 
     async obterPorId(req, res){
         try {
-            const animal = await AnimalModel.findAll({where: {id: req.params.id}});
-            return res.json(animal);
+            const padrinho = await PadrinhoModel.findAll({where: {id: req.params.id}});
+            return res.json(padrinho);
         } catch (err) {
             return console.err("Erro na busca: ", err);
         }
@@ -22,29 +22,30 @@ module.exports = {
 
     async criar(req, res){
         try {
-            const animal = await AnimalModel.create(req.body);
-            return res.json(animal);
+            const padrinho = await PadrinhoModel.create(req.body);
+            return res.json(padrinho);
         } catch (err) {
             return console.error('Erro na criação', err);
         }
     },
 
     async atualizar(req, res){
+
         const Sequelize = require('sequelize');
         const operacao = Sequelize.Op
         const id = req.params.id;
-        
+
         try {
-            await AnimalModel.update(req.body, {where: {id: {[operacao.eq]: id }}});
-            return res.json({msg: `Aniaml ${title} atualizado com sucesso!`});
+            await PadrinhoModel.update(req.body, {where: {id: {[operacao.eq]: id }}});
+            return res.json({msg: `Padrinho ${title} atualizado com sucesso!`});
         } catch (err) {
-            return res.json({msg: `Aniaml ${title} não foi atualizado`}, err);            
+            return res.json({msg: `Padrinho ${title} não foi atualizado`}, err);            
         }
     },
 
     async remover(req, res){
         try {
-            await AnimalModel.destroy({where: {id: req.params.id }});
+            await PadrinhoModel.destroy({where: {id: req.params.id }});
             return res.json({msg: `Exclusão de item de ID ${req.params.id} feita com sucesso!`});
         } catch (err) {
             return console.err("Erro na exclusão: ", err);

@@ -3,9 +3,9 @@ const sequelize = require("../database.js");
 
 const schema = "public";
 
-class User extends Sequelize.Model {}
+class Padrinho extends Sequelize.Model {}
 
-User.init(
+Padrinho.init(
 	{
 		id: {
 			type: Sequelize.INTEGER,
@@ -17,9 +17,9 @@ User.init(
 		ddd: Sequelize.INTEGER,
 		celular: Sequelize.INTEGER,
 	},
-	{ sequelize, modelName: "member", schema }
+	{ sequelize, modelName: "padrinho", schema }
 );
 
 sequelize.sync();
 
-module.exports = User;
+module.exports = Padrinho;
