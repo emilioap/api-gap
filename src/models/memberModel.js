@@ -9,7 +9,8 @@ User.init(
 	{
 		id: {
 			type: Sequelize.INTEGER,
-			primaryKey: true
+			primaryKey: true,
+			autoIncrement: true
 		},
 		nome: Sequelize.STRING,
 		email: Sequelize.STRING,
