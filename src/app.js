@@ -13,6 +13,6 @@ app.use(express.urlencoded({ extended: true }))
 app.use('/', index);
 app.use('/padrinho', padrinhoRoute);
 app.use('/animal', animalRoute);
-app.use('/configRoute', configRoute);
+app.use('/config', configRoute);
 
 module.exports = app;
