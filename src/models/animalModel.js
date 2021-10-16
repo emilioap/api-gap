@@ -13,8 +13,11 @@ Animal.init(
 			autoIncrement: true
 		},
 		nome: Sequelize.STRING,
-		foto: Sequelize.STRING,
-		idade: Sequelize.INTEGER,
+		foto: {
+			type: Sequelize.STRING,
+			allowNull: true
+		},
+		idadeMeses: Sequelize.INTEGER,
 		tipo: Sequelize.STRING,
 		temperamento: Sequelize.STRING,
 		historia: Sequelize.TEXT,

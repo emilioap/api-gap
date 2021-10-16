@@ -16,7 +16,7 @@ module.exports = {
             const padrinho = await PadrinhoModel.findAll({where: {id: req.params.id}});
             return res.json(padrinho);
         } catch (err) {
-            return console.err("Erro na busca: ", err);
+            return console.error(`Configuração ${title} não foi atualizada`);
         }
     },
 
@@ -39,7 +39,7 @@ module.exports = {
             await PadrinhoModel.update(req.body, {where: {id: {[operacao.eq]: id }}});
             return res.json({msg: `Padrinho ${title} atualizado com sucesso!`});
         } catch (err) {
-            return res.json({msg: `Padrinho ${title} não foi atualizado`}, err);            
+            return console.error(`Padrinho ${title} não foi atualizado`);   
         }
     },
 
@@ -48,7 +48,7 @@ module.exports = {
             await PadrinhoModel.destroy({where: {id: req.params.id }});
             return res.json({msg: `Exclusão de item de ID ${req.params.id} feita com sucesso!`});
         } catch (err) {
-            return console.err("Erro na exclusão: ", err);
+            return console.error("Erro na exclusão: ", err);
         }
     }
 }

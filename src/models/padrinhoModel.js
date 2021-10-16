@@ -12,10 +12,10 @@ Padrinho.init(
 			primaryKey: true,
 			autoIncrement: true
 		},
-		nome: Sequelize.STRING,
-		email: Sequelize.STRING,
-		ddd: Sequelize.INTEGER,
-		celular: Sequelize.INTEGER,
+		nome: Sequelize.STRING(200),
+		email: Sequelize.STRING(100),
+		ddd: Sequelize.SMALLINT,
+		celular: Sequelize.INTEGER(9),
 	},
 	{ sequelize, modelName: "padrinho", schema }
 );
