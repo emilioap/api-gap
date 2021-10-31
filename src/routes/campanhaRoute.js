@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const controller = require('../controllers/padrinhoController');
+const controller = require('../controllers/campanhaController');
 
 router.get('/', controller.listarTodos);
 router.get('/:id', controller.obterPorId);

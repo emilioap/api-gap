@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const controller = require('../controllers/animalController')
+const controller = require('../controllers/animalController');
 
 router.get('/', controller.listarTodos);
 router.get('/:id', controller.obterPorId);
