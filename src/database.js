@@ -8,6 +8,9 @@ const sequelize = new Sequelize(
 		host: "ec2-44-199-26-122.compute-1.amazonaws.com",
 		dialect: "postgres",
     protocol: "postgres",
+		define: {
+			freezeTableName: true
+		},
 		dialectOptions: {
 			ssl: {
         require: true,

@@ -36,9 +36,9 @@ module.exports = {
         
         try {
             await AnimalModel.update(req.body, {where: {id: {[operacao.eq]: id }}});
-            return res.json({msg: `Animal ${title} atualizado com sucesso!`});
+            return res.json({msg: `Item ${title} atualizado com sucesso!`});
         } catch (err) {
-            return console.error(`Animal ${title} não foi atualizado`);           
+            return console.error(`Item ${title} não foi atualizado`);           
         }
     },
 

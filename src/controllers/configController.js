@@ -36,9 +36,9 @@ module.exports = {
         
         try {
             await ConfigModel.update(req.body, {where: {id: {[operacao.eq]: id }}});
-            return res.json({msg: `Configuração ${title} atualizada com sucesso!`});
+            return res.json({msg: `Item ${title} atualizada com sucesso!`});
         } catch (err) {
-            return console.error(`Configuração ${title} não foi atualizada`);            
+            return console.error(`Item ${title} não foi atualizada`);            
         }
     },
 
