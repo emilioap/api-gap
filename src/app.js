@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-require("dotenv-safe").config();
+const cors = require('cors');
 
 //Rotas
 const adocaoRoute = require('./routes/adocaoRoute');
@@ -17,6 +17,7 @@ const loginRoute = require('./routes/loginRoute');
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+app.use(cors())
 
 app.use('/adocao', adocaoRoute);
 app.use('/animal', animalRoute);
