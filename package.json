@@ -4,6 +4,7 @@
   "description": "Projeto Integrador I - GAP",
   "main": "index.js",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-kun": "^1.0.24",
     "jsonwebtoken": "^8.5.1",
