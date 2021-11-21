@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-require("dotenv-safe").config();
 
 //Rotas
 const adocaoRoute = require('./routes/adocaoRoute');

@@ -3,7 +3,7 @@ const router = express.Router();
 const controller = require('../controllers/lancamentoController');
 
 const { withJWTAuthMiddleware } = require("express-kun");
-const protectedRouter = withJWTAuthMiddleware(router, process.env.SECRET);
+const protectedRouter = withJWTAuthMiddleware(router, "06c219e5bc8378f3a8a3f83b4b7e4649");
 
 router.get('/', controller.listarTodos);
 router.get('/:id', controller.obterPorId);
